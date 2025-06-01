@@ -76,8 +76,8 @@ class GamePanel extends JPanel implements KeyListener{
                     changeCoordinate("y", diagonalSpeed);
                 } else changeCoordinate("x", speed);
             }
-            if (upPressed) changeCoordinate("y", speed*-1);
-            if (downPressed) changeCoordinate("y", speed);
+            else if (upPressed) changeCoordinate("y", speed*-1);
+            else if (downPressed) changeCoordinate("y", speed);
             if (spacePressed){
                 Bullet bul = new Bullet(x, y);
                 Sprites.add(bul);
