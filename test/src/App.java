@@ -22,7 +22,7 @@ class GamePanel extends JPanel implements KeyListener{
     private int x = 275;
     private int y = 500;
     private int speed = 3;
-    private int diagonalSpeed = 1;
+    private int diagonalSpeed = 2;
 
     /* bullet settings */
     private int bulletSpeed = 10;
@@ -67,7 +67,7 @@ class GamePanel extends JPanel implements KeyListener{
                     changeCoordinate("y", diagonalSpeed);
                 } else changeCoordinate("x", speed*-1);
             }
-            if (rightPressed){
+            else if (rightPressed){
                 if (upPressed){
                     changeCoordinate("x", diagonalSpeed);
                     changeCoordinate("y", diagonalSpeed*-1);
